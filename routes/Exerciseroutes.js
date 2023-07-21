@@ -6,7 +6,7 @@ const Gymmodal = require("../models/Gymmodal")
 
 route.get("/exercise", authMiddleware, async (req, res) => {
 
-   
+
 
     const { category, type } = req.query
 
@@ -30,6 +30,28 @@ route.get("/exercise", authMiddleware, async (req, res) => {
     }
 
 })
+
+
+
+
+route.get('/search', async (req, res) => {
+    try {
+        if (!req.query.q) {
+            return res.status(400).send('Missing query parameter: q');
+        }
+        let regexpattern = new RegExp(req.query.q, 'i');
+        let gymexercises = await Gymmodal.find({ name: regexpattern });
+
+        if (gymexercises.length === 0) {
+            return res.send('No exercises found');
+        }
+        res.json(gymexercises);
+    } catch (error) {
+
+        res.status(500).send('Internal Server Error');
+    }
+});
+
 
 
 module.exports = route
