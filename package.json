@@ -1,5 +1,5 @@
 {
-  "name": "cw_backend",
+  "name": "tryserver",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShudhanshuShekhar123/cw_backend.git"
+    "url": "git+https://github.com/ShudhanshuShekhar123/tryserver.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ShudhanshuShekhar123/cw_backend/issues"
+    "url": "https://github.com/ShudhanshuShekhar123/tryserver/issues"
   },
-  "homepage": "https://github.com/ShudhanshuShekhar123/cw_backend#readme",
+  "homepage": "https://github.com/ShudhanshuShekhar123/tryserver#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.3.1",
