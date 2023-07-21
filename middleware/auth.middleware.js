@@ -8,7 +8,7 @@ const authMiddleware = async (req, res, next) => {
 
   if (blacklistedtokens[0]?.blacklist.includes(token)) {
     console.log("token present")
-    res.status(401).send({"msg":"You nned to login again, Token prent in blacklist"});
+    res.status(401).send({"msg":"You need to login to accesss this route"});
   } else {
     jwt.verify(token, "masai", (err, decoded) => {
       if (err) {
