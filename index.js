@@ -4,7 +4,7 @@ const server = express()
 const cors = require("cors")
 require("dotenv").config()
 const {connect}=require("./config/db")
-server.use(express.json())\
+server.use(express.json())
 server.use(cors({ origin:"*"}))
 const {authMiddleware}=require("./middleware/auth.middleware")
 const {userRouter}=require("./routes/user.route")
